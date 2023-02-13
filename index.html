@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/515368.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Medifine</title>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="checkbox">
+        <img src="img/logo.png" alt="">
+        <label for="checkbox"><img src="img/hambrger.png" alt=""></label>
+        <ul>
+            <li><a href="#home" class="navactive">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+            <div id="home1">
+                <h1>Complate Health<br>Care Solutions for<br>Everyone</h1>
+                <p>We're always available for our Patients with emergen problems.You can easily reach <br> us 24/7. We focused on highest quality</p>
+                <button>Make Appointment</button>
+            </div>
+            <div id="home2"><img src="img/doctor.png" alt=""></div>
+    </section>
+    <section id="about">
+        <div>
+        <h1>Best and Experienced Faculties</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa totam nisi illo dolorem tenetur delectus enim vel quam eaque, eum suscipit placeat fugit minima impedit consectetur quae quos sed maxime adipisci, blanditiis possimus. Voluptas provident officiis tempora quo eius necessitatibus</p>
+        <div>
+            <div>
+                <h1>20+</h1>
+                <h2>Doctors</h2>
+            </div>
+            <div>
+                <h1>50,000+</h1>
+                <h2>Customers</h2>
+            </div>
+            <div>
+                <h1>500+</h1>
+                <h2>Student</h2>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id="contact">
+            <h1>Contact Form</h1>
+            <label for="entername">Name</label>
+            <input type="text" id="entername" placeholder="Enter your name">
+            <label for="enteremail">Email</label>
+            <input type="email" id="enteremail" placeholder="Enter your email">
+            <label for="entermassage">Massage</label>
+            <textarea id="entermassage"  rows="5" placeholder="Enter your massage"></textarea>
+            <button>Submit</button>
+    </section>
+    <script>
+        let li = document.querySelectorAll('nav li')
+        let a = document.querySelectorAll('nav li a')
+        for(let i =0;i<li.length;i++){
+            li[i].addEventListener('click',()=>{
+                for(let j=0;j<li.length;j++){
+                    a[j].classList.remove('navactive')
+                }
+                a[i].classList.add('navactive')
+            })
+        }
+    </script>
+</body>
+</html>
